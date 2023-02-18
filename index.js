@@ -37,8 +37,8 @@ app.get("/healthCheck", (req, res) => {
 app.use(notFound);
 app.use(handleError);
 
-const PORT = 5000;
+const PORT = 3000;
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Server running on port: ${PORT}`);
 });
